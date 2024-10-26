@@ -11,9 +11,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Document
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 
 public class Author {
 
@@ -23,5 +20,46 @@ public class Author {
     @Transient
     private List<String> BookTitles;
 
+    public Author() {
+    }
+
+    public Author(String id, String authorName, LocalDate dob, List<String> bookTitles) {
+        this.id = id;
+        this.authorName = authorName;
+        this.dob = dob;
+        BookTitles = bookTitles;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public List<String> getBookTitles() {
+        return BookTitles;
+    }
+
+    public void setBookTitles(List<String> bookTitles) {
+        BookTitles = bookTitles;
+    }
 }
 
