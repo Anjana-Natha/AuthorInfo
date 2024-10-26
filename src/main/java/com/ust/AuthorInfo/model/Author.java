@@ -17,7 +17,7 @@ import java.util.List;
 
 public class Author {
 
-    private int id;
+    private String id;
     private String authorName;
     private LocalDate dob;
     @Transient
